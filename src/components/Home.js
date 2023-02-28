@@ -1,9 +1,12 @@
 import React, { useEffect, useState} from "react";
 import { ApiFetch } from "../utils/ApiFetch";
 
+import Navbar from './Navbar';
+import News from './News';
+
 const Home = () => {
+    const [ category, setCategory ] = useState("cnn-news");
     const [ data, setData ] = useState(null);
-    const [ category, setCategory ] = useState('cnn-news');
 
     // useEffect(() => {
     //     const getData = async () => {
@@ -15,16 +18,15 @@ const Home = () => {
 
     useEffect(() => {
         ApiFetch(`${category}`)
-        .then(({data}) => setData(data))
+        .then((data) => setData(data.data))
     }, [category])
 
     return (
-        <div>
-            <h1>Home</h1>
-            {
-                console.log([data])
-            }
-        </div>
+        <React.Fragment>
+            <Navbar setCategory={setCategory} category={category}/>
+            <News data={data} />
+        </React.Fragment>
+        
     )
             
 }
