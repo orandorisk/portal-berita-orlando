@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import News from './News';
 
 const Home = () => {
-    const [ category, setCategory ] = useState("cnn-news");
+    const [ category, setCategory ] = useState("cnn-news/ekonomi");
     const [ data, setData ] = useState(null);
 
     // useEffect(() => {

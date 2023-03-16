@@ -1,4 +1,36 @@
 nav {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    align-items: flex-end;
+}
+
+nav div:nth-child(2) {
+    flex-direction: column;
+}
+nav .horizontal {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.icon {
+    max-width: 20px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    color: #493939;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
 }
