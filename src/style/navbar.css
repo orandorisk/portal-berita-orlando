@@ -34,3 +34,17 @@ nav .horizontal {
     border: none;
     cursor: pointer;
 }
+
+.container-nav .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* media query */
+@media screen and (max-width: 968px) {
+    .container-nav {
+        flex-direction: column;
+    }
+}

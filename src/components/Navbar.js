@@ -11,12 +11,12 @@ import HorizontalScroll from 'react-horizontal-scrolling';
 const Navbar = ({setCategory}) => {
   return (
     <nav>
-        <div>
+        <div className='container-nav'>
             <div>
                 <h4>Editon: English</h4>
             </div>
             <div>
-                <img src={Logo} alt="logo" />
+                <img src={Logo} alt="logo" className='image'/>
                 <h4>Tuesday, 2 March 2023</h4>
             </div>
             <div>

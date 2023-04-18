@@ -8,18 +8,18 @@ const Home = () => {
     const [ category, setCategory ] = useState("cnn-news/ekonomi");
     const [ data, setData ] = useState(null);
 
-    // useEffect(() => {
-    //     const getData = async () => {
-    //         const { data } = await ApiFetch(`${category}`);
-    //         setData(data);
-    //     }
-    //     getData();
-    // }, [category]);
-
     useEffect(() => {
-        ApiFetch(`${category}`)
-        .then((data) => setData(data.data))
-    }, [category])
+        const getData = async () => {
+            const { data } = await ApiFetch(`${category}`);
+            setData(data);
+        }
+        getData();
+    }, [category]);
+
+    // useEffect(() => {
+    //     ApiFetch(`${category}`)
+    //     .then((data) => setData(data.data))
+    // }, [category])
 
     return (
         <React.Fragment>
